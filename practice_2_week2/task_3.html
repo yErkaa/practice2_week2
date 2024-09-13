@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Text Overlay on Image</title>
+    <style>
+        body{
+            background-color: #3f1111;
+        }
+        .image-text-container {
+            position: relative;
+            width: 300px;
+        }
+
+        .image-text-container img {
+            width: 100%;
+            display: block;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px #000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="image-text-container">
+    <img src="https://i.guim.co.uk/img/media/ab0062b3747db1200a7d2c886b99de84dfe25a39/0_125_3000_1800/master/3000.jpg?width=965&dpr=2&s=none" alt="Basketball">
+    <div class="text-overlay">Slam Dunk!</div>
+</div>
+
+</body>
+</html>

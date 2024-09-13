@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Navigation Hover Effect</title>
+    <style>
+        body{
+            background-color: #3f1111;
+        }
+        .nav-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-item {
+            font-size: 18px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            color: #444;
+            position: relative;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .nav-item:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: orange;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        .nav-item:hover,
+        .nav-item:focus {
+            color: orange;
+        }
+
+        .nav-item:hover:after,
+        .nav-item:focus:after {
+            width: 100%;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav-container">
+    <div class="nav-item" tabindex="0">Home</div>
+    <div class="nav-item" tabindex="0">Players</div>
+    <div class="nav-item" tabindex="0">Teams</div>
+    <div class="nav-item" tabindex="0">Games</div>
+</div>
+
+</body>
+</html>

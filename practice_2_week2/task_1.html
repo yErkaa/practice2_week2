@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Styled Checkbox</title>
+
+    <style>
+        body{
+            background-color: #3f1111;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .input {
+            display: none;
+        }
+
+        .label {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background: #ddd;
+            border: 2px solid #444;
+            transition: all 0.3s ease;
+        }
+
+        .label:after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.3s ease;
+        }
+
+        .checkbox-input:checked + .label {
+            background: orange;
+            border-color: #ff4500;
+        }
+
+        .checkbox-input:checked + .label:after {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <input type="checkbox" id="checkbox" class="input">
+    <label for="checkbox" class="label"></label>
+</div>
+
+</body>
+</html>
